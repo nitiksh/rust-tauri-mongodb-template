@@ -27,7 +27,7 @@ A simple educational template to learn building desktop applications with **Taur
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/rust-tauri-mongodb-template.git
+git clone https://github.com/nitiksh/rust-tauri-mongodb-template.git
 cd rust-tauri-mongodb-template
 ```
 

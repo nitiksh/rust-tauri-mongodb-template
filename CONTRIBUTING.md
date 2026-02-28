@@ -25,7 +25,7 @@ Open an issue with:
 ### Setup
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/rust-tauri-mongodb-template.git
+git clone https://github.com/nitiksh/rust-tauri-mongodb-template.git
 cd ui && npm install
 cd ../src-tauri && cp .env.example .env
 cargo tauri dev
