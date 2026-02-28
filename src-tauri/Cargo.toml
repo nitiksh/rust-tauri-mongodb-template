@@ -1,10 +1,10 @@
 [package]
-name = "app"
-version = "0.1.0"
-description = "A Tauri App"
-authors = ["you"]
-license = ""
-repository = ""
+name = "tauri-mongodb-app"
+version = "1.0.0"
+description = "A Tauri desktop application with MongoDB integration"
+authors = ["Nitiksh contact@ntxm.org"]
+license = "MIT"
+repository = "https://github.com/nitiksh/rust-tauri-mongodb-template"
 edition = "2021"
 rust-version = "1.77.2"
 
@@ -23,3 +23,8 @@ serde = { version = "1.0", features = ["derive"] }
 log = "0.4"
 tauri = { version = "2.9.2", features = [] }
 tauri-plugin-log = "2"
+mongodb = "3.1"
+tokio = { version = "1.40", features = ["full"] }
+anyhow = "1.0"
+dotenvy = "0.15"
+futures = "0.3"

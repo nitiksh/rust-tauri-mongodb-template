@@ -1,20 +1,24 @@
-import { useState } from "react";
-import { invoke } from "@tauri-apps/api/core";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+import Inbox from "./pages/Inbox";
+import Create from "./pages/Create";
+import Update from "./pages/Update";
+import Delete from "./pages/Delete";
+import Success from "./pages/Success";
 
 function App() {
-  const [msg, setMsg] = useState("Nothing yet");
-
-  async function handleClick() {
-    const res = await invoke("get_user");
-    setMsg(res);
-  }
-
   return (
-    <div style={{ padding: "20px" }}>
-      <h1>Tauri + React + Vite</h1>
-      <button onClick={handleClick}>Call Rust</button>
-      <p>{msg}</p>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Inbox />} />
+          <Route path="create" element={<Create />} />
+          <Route path="update/:id" element={<Update />} />
+          <Route path="delete" element={<Delete />} />
+          <Route path="success" element={<Success />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
